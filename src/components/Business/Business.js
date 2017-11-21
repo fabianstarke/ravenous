@@ -5,7 +5,7 @@ import './Business.css';
 class Business extends React.Component {
   render(){
     return (
-      <div clasName="Business">
+      <div className="Business">
         <div className="image-container">
           <img src={this.props.business.imageSrc} alt={this.props.business.name}/>
         </div>

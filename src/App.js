@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import BusinessList from './components/BusinessList/BusinessList.js';
 import SearchBar from './components/SearchBar/SearchBar.js';
@@ -15,7 +14,6 @@ class App extends Component {
   this.searchYelp = this.searchYelp.bind(this);
 };
 
-
   searchYelp(term, location, sortBy){
     return Yelp.search(term, location, sortBy)
     .then(businesses => {
@@ -27,7 +25,7 @@ class App extends Component {
 
   render() {
     return (
-      <div class="App">
+      <div className="App">
         <h1>ravenous</h1>
         <SearchBar searchYelp={this.searchYelp}/>
         <BusinessList businesses={this.state.businesses}/>
